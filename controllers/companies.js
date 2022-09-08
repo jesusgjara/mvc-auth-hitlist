@@ -11,11 +11,25 @@ module.exports = {
             console.log(err)
         }
     },
+    getAddCompany: (req,res)=>{
+        res.render('addCompany.ejs')
+    },
+    getEdit: async (req,res)=>{
+        const company = await Company.findOne({
+            _id: req.params.id
+        }).lean()
+
+        if (!company) {
+            return console.alert('Company not found')
+        } else {
+            return res.render('editCompany.ejs',)
+        }
+    },
     addCompany: async (req, res)=>{
         try{
             await Company.create({companyName: req.body.companyName, role:req.body.role, available: true, userId: req.user.id, link: req.body.roleLink})
             console.log('New company added')
-            res.redirect('/profile')
+            res.redirect('/dashboard')
         }catch(err){
             console.log(err)
         }

@@ -5,6 +5,10 @@ const { ensureAuth } = require('../middleware/auth')
 
 router.get('/', ensureAuth, companyController.getCompanies)
 
+router.get('/add', ensureAuth, companyController.getAddCompany)
+
+router.get('/edit/:id', ensureAuth, companyController.getEdit)
+
 router.post('/add', companyController.addCompany)
 
 // router.put('/markComplete', companyController.markComplete)
