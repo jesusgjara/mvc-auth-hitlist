@@ -1,4 +1,4 @@
-# Introduction
+<!-- # Introduction
 
 A Simple ToDo App is built using the MVC Architecture, we have also implemented "authorization" so folx can sign up, customize & personalize the app 
 
@@ -39,6 +39,11 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
   - DB_STRING: `your database URI` 
  ---
  
- Have fun testing and improving it! 😎
+ Have fun testing and improving it! 😎 -->
+
+ # HITLIST
+---
+Web application that allows you keep track of the companies and roles you are aplying during the job search.
+
 
 
